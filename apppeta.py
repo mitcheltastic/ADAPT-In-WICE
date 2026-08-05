@@ -884,7 +884,7 @@ with tab2:
             )
 
         st.markdown("---")
-        st.subheader("TRANSITION Policy Recommendation Results:")
+        st.subheader("ADAPT-In Policy Recommendation Results:")
 
         st.markdown(
             f"""
