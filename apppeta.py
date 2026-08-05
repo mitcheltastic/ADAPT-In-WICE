@@ -381,7 +381,7 @@ with tab1:
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ==========================================
-    # INTERACTIVE PINK SPATIAL MAP OF INDONESIA
+    # INTERACTIVE PINK SPATIAL MAP OF INDONESIA (FIXED)
     # ==========================================
     st.subheader("Spatial Distribution Map of Poverty Percentage in Indonesia")
 
@@ -393,37 +393,35 @@ with tab1:
     )
 
     if not map_df.empty:
+        min_val = float(map_df[p0_col].min())
+        max_val = float(map_df[p0_col].max())
+
         fig_map = go.Figure()
 
-        # 1. COLOR INDONESIAN LANDMASS WITH DUSTY PINK
-        fig_map.add_trace(
-            go.Choropleth(
-                locations=["Indonesia"],
-                locationmode="country names",
-                z=[1],
-                colorscale=[[0, "#F2E6EA"], [1, "#F2E6EA"]],  # Dusty Pink color for Indonesia
-                showscale=False,
-                hoverinfo="skip",
-                marker_line_color="#4A4A4A",  # Sharp dark gray island borders
-                marker_line_width=1.2,
-            )
-        )
-
-        # 2. LEGEND COLORBAR GRADIENT PINK HORIZONTAL (BOTTOM LEFT)
         fig_map.add_trace(
             go.Scattergeo(
                 lon=map_df["long"],
                 lat=map_df["lat"],
-                mode="markers",
+                mode="markers+text",
+                text=map_df[p0_col].apply(lambda x: f"{x:.1f}"),
+                textposition="top center",
+                textfont=dict(
+                    size=11,
+                    color="#2C3E50",
+                    family="Plus Jakarta Sans",
+                    weight="bold",
+                ),
                 marker=dict(
-                    size=0.1,  # Transparent
+                    size=16,
                     color=map_df[p0_col],
+                    cmin=min_val,
+                    cmax=max_val,
                     colorscale=[
-                        [0.0, "#FCE4EC"],  # Light Pink
+                        [0.0, "#FCE4EC"],
                         [0.25, "#F8C8DC"],
-                        [0.5, "#E8A0BF"],  # Medium Pink
+                        [0.5, "#E8A0BF"],
                         [0.75, "#AD336D"],
-                        [1.0, "#8A2355"],  # Dark Magenta
+                        [1.0, "#8A2355"],
                     ],
                     showscale=True,
                     colorbar=dict(
@@ -432,33 +430,15 @@ with tab1:
                             font=dict(size=12, color="#2C3E50", family="Plus Jakarta Sans"),
                             side="top",
                         ),
-                        orientation="h",  # Horizontal orientation
-                        x=0.02,
-                        y=0.05,
-                        len=0.25,
-                        thickness=12,
+                        orientation="h",
+                        x=0.08,
+                        y=0.02,
+                        len=0.35,
+                        thickness=14,
                         tickfont=dict(size=10, color="#2C3E50"),
                         outlinewidth=1,
                         outlinecolor="#CCCCCC",
                     ),
-                ),
-                showlegend=False,
-                hoverinfo="skip",
-            )
-        )
-
-        # 3. TEXT PERCENTAGE VALUES FOR P0 (PURE TEXT WITHOUT MARKERS)
-        fig_map.add_trace(
-            go.Scattergeo(
-                lon=map_df["long"],
-                lat=map_df["lat"],
-                text=map_df[p0_col].apply(lambda x: f"{x:.1f}"),
-                mode="text",  # Pure text
-                textfont=dict(
-                    size=12,
-                    color="#2C3E50",
-                    family="Plus Jakarta Sans",
-                    weight="bold",
                 ),
                 hoverinfo="text",
                 hovertext=map_df[prov_name] + ": " + map_df[p0_col].round(2).astype(str) + "%",
@@ -466,35 +446,33 @@ with tab1:
             )
         )
 
-        # 4. LOCK FOCUS TO INDONESIA, FOREIGN LANDMARKS FLAT GRAY
         fig_map.update_geos(
             visible=False,
             showcountries=True,
-            countrycolor="#B0B0B0",    # Thin outer country borders
+            countrycolor="#B0B0B0",
             countrywidth=0.8,
             showland=True,
-            landcolor="#E5E5E5",       # Foreign land in neutral gray
+            landcolor="#F2E6EA",
             showocean=True,
-            oceancolor="#FFFFFF",      # Clean white ocean
+            oceancolor="#FFFFFF",
             projection_type="mercator",
-            center={"lat": -2.5489, "lon": 118.0149},  # Center on Indonesia
-            lataxis_range=[-12, 8],     # Vertical bounds for Indonesia
-            lonaxis_range=[94, 142],    # Horizontal bounds for Indonesia
+            center={"lat": -2.5489, "lon": 118.0149},
+            lataxis_range=[-12, 8],
+            lonaxis_range=[94, 142],
         )
 
-        # 5. ENABLE PAN & ZOOM INTERACTIONS
         fig_map.update_layout(
-            margin={"r": 0, "t": 10, "l": 0, "b": 10},
-            height=480,
+            margin={"r": 10, "t": 10, "l": 20, "b": 40},
+            height=500,
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
-            dragmode="pan",  # Draggable panning
+            dragmode="pan",
         )
 
         st.plotly_chart(
-            fig_map, 
-            use_container_width=True, 
-            config={"displayModeBar": True, "scrollZoom": True}  # Enable scroll zoom & nav buttons
+            fig_map,
+            use_container_width=True,
+            config={"displayModeBar": True, "scrollZoom": True},
         )
     else:
         st.warning("Latitude/Longitude coordinate data not found.")
@@ -839,17 +817,24 @@ with tab2:
         log_exp = np.log1p(exp)
         indeks_komposit = ipm * log_exp
 
-        slider_vals = [
-            rls,
-            ipm,
-            log_exp,
-            indeks_komposit,
-            uhh,
-            sanitasi,
-            air_minum,
-            tpt,
-            tpak,
-        ]
+        # Input array disesuaikan dengan fitur dataset yang diekstrak
+        input_dict = {
+            feature_dict.get("rls", "rls"): rls,
+            feature_dict.get("exp", "exp"): exp,
+            feature_dict.get("ipm", "ipm"): ipm,
+            feature_dict.get("uhh", "uhh"): uhh,
+            feature_dict.get("sanitasi", "sanitasi"): sanitasi,
+            feature_dict.get("air", "air"): air_minum,
+            feature_dict.get("tpt", "tpt"): tpt,
+            feature_dict.get("tpak", "tpak"): tpak,
+        }
+
+        # Urutkan masukan sesuai urutan kolom fitur pada scaler/model
+        slider_vals = [input_dict.get(f, 0.0) for f in features]
+        
+        # Tambahkan variabel komposit jika model membutuhkan 10 fitur
+        if hasattr(scaler, "n_features_in_") and scaler.n_features_in_ == 10 and len(slider_vals) < 10:
+            slider_vals = [rls, ipm, log_exp, indeks_komposit, uhh, sanitasi, air_minum, tpt, tpak, log_exp]
 
         input_array = np.array(slider_vals).reshape(1, -1)
 
@@ -858,7 +843,7 @@ with tab2:
 
         pred_str = str(pred_class).lower()
 
-        if "tinggi" in pred_str or "high" in pred_str:
+        if "tinggi" in pred_str or "high" in pred_str or pred_class == 2:
             status_label = "High Priority"
             bg_color = "rgba(255, 240, 245, 0.95)"
             border_color = "#D47AE8"
@@ -866,7 +851,7 @@ with tab2:
                 "Urgent Intervention Required! Emergency social assistance, accelerated"
                 " sanitation/clean water infrastructure, and direct educational support."
             )
-        elif "sedang" in pred_str or "medium" in pred_str:
+        elif "sedang" in pred_str or "medium" in pred_str or pred_class == 1:
             status_label = "Medium Priority"
             bg_color = "rgba(255, 245, 238, 0.95)"
             border_color = "#FFB6C1"
