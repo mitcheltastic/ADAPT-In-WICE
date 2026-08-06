@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Sparkles, Sliders, Play, RefreshCw } from 'lucide-react';
+import { Sliders, Play, RefreshCw, Calculator } from 'lucide-react';
 
 interface SimulationFormProps {
   onPredict: (formData: any) => void;
@@ -23,8 +23,9 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
     tpak: 65.0,
   });
 
-  const handleChange = (field: string, val: number) => {
-    setFormData((prev) => ({ ...prev, [field]: val }));
+  const handleChange = (field: string, val: string) => {
+    const parsed = parseFloat(val);
+    setFormData((prev) => ({ ...prev, [field]: isNaN(parsed) ? 0 : parsed }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -36,169 +37,161 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
     <form onSubmit={handleSubmit} className="glass-card rounded-3xl p-6 md:p-8 border border-pink-200 shadow-lg">
       <div className="flex items-center gap-3 mb-6 border-b border-pink-200 pb-4">
         <div className="p-2.5 rounded-xl bg-pink-100 text-pink-600">
-          <Sliders className="w-5 h-5" />
+          <Calculator className="w-5 h-5" />
         </div>
         <div>
           <h3 className="text-lg font-extrabold text-pink-700">
             Interactive Simulation Tool (Precision Input)
           </h3>
           <p className="text-xs text-pink-700/80">
-            Adjust socio-economic indicators below to simulate AI intervention recommendations.
+            Enter the socio-economic indicator values for a region below:
           </p>
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {/* Category 1: Education & Economy */}
-        <div className="bg-white/70 p-4 rounded-2xl border border-pink-200">
-          <h4 className="text-xs font-bold text-pink-700 uppercase tracking-wide mb-4 border-b border-pink-100 pb-2">
+        <div className="bg-white/80 p-5 rounded-2xl border border-pink-200 shadow-2xs">
+          <h4 className="text-xs font-extrabold text-pink-700 uppercase tracking-wider mb-4 border-b border-pink-100 pb-2">
             Education & Economy
           </h4>
 
           <div className="space-y-4">
             <div>
-              <div className="flex justify-between text-xs font-semibold mb-1">
-                <label className="text-gray-700">Mean Years of Schooling (MYS)</label>
-                <span className="text-pink-600 font-bold">{formData.rls} Years</span>
-              </div>
+              <label className="block text-xs font-bold text-gray-700 mb-1">
+                Mean Years of Schooling (MYS - Years)
+              </label>
               <input
-                type="range"
+                type="number"
                 min={0}
                 max={15}
                 step={0.1}
                 value={formData.rls}
-                onChange={(e) => handleChange('rls', parseFloat(e.target.value))}
-                className="w-full accent-pink-500 cursor-pointer"
+                onChange={(e) => handleChange('rls', e.target.value)}
+                className="w-full px-3 py-2 rounded-xl border border-pink-200 text-sm font-semibold text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent shadow-2xs transition-all"
               />
             </div>
 
             <div>
-              <div className="flex justify-between text-xs font-semibold mb-1">
-                <label className="text-gray-700">Per Capita Expenditure</label>
-                <span className="text-pink-600 font-bold">{formData.exp.toLocaleString()} k IDR</span>
-              </div>
+              <label className="block text-xs font-bold text-gray-700 mb-1">
+                Per Capita Expenditure (Thousand IDR)
+              </label>
               <input
-                type="range"
+                type="number"
                 min={1000}
                 max={30000}
                 step={500}
                 value={formData.exp}
-                onChange={(e) => handleChange('exp', parseFloat(e.target.value))}
-                className="w-full accent-pink-500 cursor-pointer"
+                onChange={(e) => handleChange('exp', e.target.value)}
+                className="w-full px-3 py-2 rounded-xl border border-pink-200 text-sm font-semibold text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent shadow-2xs transition-all"
               />
             </div>
 
             <div>
-              <div className="flex justify-between text-xs font-semibold mb-1">
-                <label className="text-gray-700">Human Development Index (HDI)</label>
-                <span className="text-pink-600 font-bold">{formData.ipm}</span>
-              </div>
+              <label className="block text-xs font-bold text-gray-700 mb-1">
+                Human Development Index (HDI)
+              </label>
               <input
-                type="range"
+                type="number"
                 min={40}
                 max={90}
                 step={0.5}
                 value={formData.ipm}
-                onChange={(e) => handleChange('ipm', parseFloat(e.target.value))}
-                className="w-full accent-pink-500 cursor-pointer"
+                onChange={(e) => handleChange('ipm', e.target.value)}
+                className="w-full px-3 py-2 rounded-xl border border-pink-200 text-sm font-semibold text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent shadow-2xs transition-all"
               />
             </div>
           </div>
         </div>
 
         {/* Category 2: Health & Infrastructure */}
-        <div className="bg-white/70 p-4 rounded-2xl border border-pink-200">
-          <h4 className="text-xs font-bold text-pink-700 uppercase tracking-wide mb-4 border-b border-pink-100 pb-2">
+        <div className="bg-white/80 p-5 rounded-2xl border border-pink-200 shadow-2xs">
+          <h4 className="text-xs font-extrabold text-pink-700 uppercase tracking-wider mb-4 border-b border-pink-100 pb-2">
             Health & Infrastructure
           </h4>
 
           <div className="space-y-4">
             <div>
-              <div className="flex justify-between text-xs font-semibold mb-1">
-                <label className="text-gray-700">Life Expectancy</label>
-                <span className="text-pink-600 font-bold">{formData.uhh} Years</span>
-              </div>
+              <label className="block text-xs font-bold text-gray-700 mb-1">
+                Life Expectancy (Years)
+              </label>
               <input
-                type="range"
+                type="number"
                 min={50}
                 max={80}
                 step={0.5}
                 value={formData.uhh}
-                onChange={(e) => handleChange('uhh', parseFloat(e.target.value))}
-                className="w-full accent-pink-500 cursor-pointer"
+                onChange={(e) => handleChange('uhh', e.target.value)}
+                className="w-full px-3 py-2 rounded-xl border border-pink-200 text-sm font-semibold text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent shadow-2xs transition-all"
               />
             </div>
 
             <div>
-              <div className="flex justify-between text-xs font-semibold mb-1">
-                <label className="text-gray-700">Decent Sanitation Access</label>
-                <span className="text-pink-600 font-bold">{formData.sanitasi}%</span>
-              </div>
+              <label className="block text-xs font-bold text-gray-700 mb-1">
+                Decent Sanitation Access (%)
+              </label>
               <input
-                type="range"
+                type="number"
                 min={0}
                 max={100}
                 step={1}
                 value={formData.sanitasi}
-                onChange={(e) => handleChange('sanitasi', parseFloat(e.target.value))}
-                className="w-full accent-pink-500 cursor-pointer"
+                onChange={(e) => handleChange('sanitasi', e.target.value)}
+                className="w-full px-3 py-2 rounded-xl border border-pink-200 text-sm font-semibold text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent shadow-2xs transition-all"
               />
             </div>
 
             <div>
-              <div className="flex justify-between text-xs font-semibold mb-1">
-                <label className="text-gray-700">Safe Drinking Water Access</label>
-                <span className="text-pink-600 font-bold">{formData.air}%</span>
-              </div>
+              <label className="block text-xs font-bold text-gray-700 mb-1">
+                Safe Drinking Water Access (%)
+              </label>
               <input
-                type="range"
+                type="number"
                 min={0}
                 max={100}
                 step={1}
                 value={formData.air}
-                onChange={(e) => handleChange('air', parseFloat(e.target.value))}
-                className="w-full accent-pink-500 cursor-pointer"
+                onChange={(e) => handleChange('air', e.target.value)}
+                className="w-full px-3 py-2 rounded-xl border border-pink-200 text-sm font-semibold text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent shadow-2xs transition-all"
               />
             </div>
           </div>
         </div>
 
-        {/* Category 3: Employment & GRDP */}
-        <div className="bg-white/70 p-4 rounded-2xl border border-pink-200">
-          <h4 className="text-xs font-bold text-pink-700 uppercase tracking-wide mb-4 border-b border-pink-100 pb-2">
+        {/* Category 3: Employment & Labor */}
+        <div className="bg-white/80 p-5 rounded-2xl border border-pink-200 shadow-2xs">
+          <h4 className="text-xs font-extrabold text-pink-700 uppercase tracking-wider mb-4 border-b border-pink-100 pb-2">
             Employment & Labor
           </h4>
 
           <div className="space-y-4">
             <div>
-              <div className="flex justify-between text-xs font-semibold mb-1">
-                <label className="text-gray-700">Open Unemployment Rate</label>
-                <span className="text-pink-600 font-bold">{formData.tpt}%</span>
-              </div>
+              <label className="block text-xs font-bold text-gray-700 mb-1">
+                Open Unemployment Rate (%)
+              </label>
               <input
-                type="range"
+                type="number"
                 min={0}
                 max={25}
                 step={0.1}
                 value={formData.tpt}
-                onChange={(e) => handleChange('tpt', parseFloat(e.target.value))}
-                className="w-full accent-pink-500 cursor-pointer"
+                onChange={(e) => handleChange('tpt', e.target.value)}
+                className="w-full px-3 py-2 rounded-xl border border-pink-200 text-sm font-semibold text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent shadow-2xs transition-all"
               />
             </div>
 
             <div>
-              <div className="flex justify-between text-xs font-semibold mb-1">
-                <label className="text-gray-700">Labor Force Participation Rate</label>
-                <span className="text-pink-600 font-bold">{formData.tpak}%</span>
-              </div>
+              <label className="block text-xs font-bold text-gray-700 mb-1">
+                Labor Force Participation Rate (%)
+              </label>
               <input
-                type="range"
+                type="number"
                 min={0}
                 max={100}
                 step={1}
                 value={formData.tpak}
-                onChange={(e) => handleChange('tpak', parseFloat(e.target.value))}
-                className="w-full accent-pink-500 cursor-pointer"
+                onChange={(e) => handleChange('tpak', e.target.value)}
+                className="w-full px-3 py-2 rounded-xl border border-pink-200 text-sm font-semibold text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent shadow-2xs transition-all"
               />
             </div>
           </div>
