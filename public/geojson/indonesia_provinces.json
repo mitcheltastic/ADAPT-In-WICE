@@ -1,0 +1,1399 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "ACEH",
+        "provinsi": "ACEH",
+        "avg_p0": 15.69,
+        "region_count": 23,
+        "priority": "High Priority",
+        "center": [
+          96.7494,
+          4.6951
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.04939999999999,
+              3.9951
+            ],
+            [
+              97.4494,
+              3.9951
+            ],
+            [
+              97.4494,
+              5.3951
+            ],
+            [
+              96.04939999999999,
+              5.3951
+            ],
+            [
+              96.04939999999999,
+              3.9951
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "SUMATERA UTARA",
+        "provinsi": "SUMATERA UTARA",
+        "avg_p0": 11.09,
+        "region_count": 33,
+        "priority": "Medium Priority",
+        "center": [
+          99.071,
+          2.1154
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              98.371,
+              1.4154000000000002
+            ],
+            [
+              99.771,
+              1.4154000000000002
+            ],
+            [
+              99.771,
+              2.8154000000000003
+            ],
+            [
+              98.371,
+              2.8154000000000003
+            ],
+            [
+              98.371,
+              1.4154000000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "SUMATERA BARAT",
+        "provinsi": "SUMATERA BARAT",
+        "avg_p0": 6.56,
+        "region_count": 19,
+        "priority": "Low Priority",
+        "center": [
+          100.5707,
+          -0.7399
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              99.8707,
+              -1.4399
+            ],
+            [
+              101.2707,
+              -1.4399
+            ],
+            [
+              101.2707,
+              -0.03990000000000005
+            ],
+            [
+              99.8707,
+              -0.03990000000000005
+            ],
+            [
+              99.8707,
+              -1.4399
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "RIAU",
+        "provinsi": "RIAU",
+        "avg_p0": 8.34,
+        "region_count": 12,
+        "priority": "Medium Priority",
+        "center": [
+          101.7068,
+          0.5071
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              101.0068,
+              -0.19289999999999996
+            ],
+            [
+              102.4068,
+              -0.19289999999999996
+            ],
+            [
+              102.4068,
+              1.2071
+            ],
+            [
+              101.0068,
+              1.2071
+            ],
+            [
+              101.0068,
+              -0.19289999999999996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "JAMBI",
+        "provinsi": "JAMBI",
+        "avg_p0": 7.98,
+        "region_count": 11,
+        "priority": "Low Priority",
+        "center": [
+          103.6131,
+          -1.6111
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.9131,
+              -2.3110999999999997
+            ],
+            [
+              104.3131,
+              -2.3110999999999997
+            ],
+            [
+              104.3131,
+              -0.9111
+            ],
+            [
+              102.9131,
+              -0.9111
+            ],
+            [
+              102.9131,
+              -2.3110999999999997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "SUMATERA SELATAN",
+        "provinsi": "SUMATERA SELATAN",
+        "avg_p0": 13.21,
+        "region_count": 17,
+        "priority": "Medium Priority",
+        "center": [
+          104.1698,
+          -3.3199
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.46979999999999,
+              -4.0199
+            ],
+            [
+              104.8698,
+              -4.0199
+            ],
+            [
+              104.8698,
+              -2.6199000000000003
+            ],
+            [
+              103.46979999999999,
+              -2.6199000000000003
+            ],
+            [
+              103.46979999999999,
+              -4.0199
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "BENGKULU",
+        "provinsi": "BENGKULU",
+        "avg_p0": 14.93,
+        "region_count": 10,
+        "priority": "High Priority",
+        "center": [
+          102.2655,
+          -3.8004
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              101.5655,
+              -4.5004
+            ],
+            [
+              102.9655,
+              -4.5004
+            ],
+            [
+              102.9655,
+              -3.1003999999999996
+            ],
+            [
+              101.5655,
+              -3.1003999999999996
+            ],
+            [
+              101.5655,
+              -4.5004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "LAMPUNG",
+        "provinsi": "LAMPUNG",
+        "avg_p0": 12.15,
+        "region_count": 15,
+        "priority": "Medium Priority",
+        "center": [
+          105.0257,
+          -4.5586
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.3257,
+              -5.2586
+            ],
+            [
+              105.7257,
+              -5.2586
+            ],
+            [
+              105.7257,
+              -3.8586
+            ],
+            [
+              104.3257,
+              -3.8586
+            ],
+            [
+              104.3257,
+              -5.2586
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "KEP. BANGKA BELITUNG",
+        "provinsi": "KEP. BANGKA BELITUNG",
+        "avg_p0": 5.07,
+        "region_count": 7,
+        "priority": "Low Priority",
+        "center": [
+          118,
+          -2.5
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              117.3,
+              -3.2
+            ],
+            [
+              118.7,
+              -3.2
+            ],
+            [
+              118.7,
+              -1.8
+            ],
+            [
+              117.3,
+              -1.8
+            ],
+            [
+              117.3,
+              -3.2
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "KEPULAUAN RIAU",
+        "provinsi": "KEPULAUAN RIAU",
+        "avg_p0": 7.69,
+        "region_count": 7,
+        "priority": "Low Priority",
+        "center": [
+          104.4534,
+          3.9456
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.7534,
+              3.2456000000000005
+            ],
+            [
+              105.1534,
+              3.2456000000000005
+            ],
+            [
+              105.1534,
+              4.6456
+            ],
+            [
+              103.7534,
+              4.6456
+            ],
+            [
+              103.7534,
+              3.2456000000000005
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "DKI JAKARTA",
+        "provinsi": "DKI JAKARTA",
+        "avg_p0": 6.57,
+        "region_count": 6,
+        "priority": "Low Priority",
+        "center": [
+          106.8456,
+          -6.2088
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.1456,
+              -6.9088
+            ],
+            [
+              107.54560000000001,
+              -6.9088
+            ],
+            [
+              107.54560000000001,
+              -5.5088
+            ],
+            [
+              106.1456,
+              -5.5088
+            ],
+            [
+              106.1456,
+              -6.9088
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "JAWA BARAT",
+        "provinsi": "JAWA BARAT",
+        "avg_p0": 8.97,
+        "region_count": 27,
+        "priority": "Medium Priority",
+        "center": [
+          107.6098,
+          -6.9175
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.9098,
+              -7.617500000000001
+            ],
+            [
+              108.30980000000001,
+              -7.617500000000001
+            ],
+            [
+              108.30980000000001,
+              -6.2175
+            ],
+            [
+              106.9098,
+              -6.2175
+            ],
+            [
+              106.9098,
+              -7.617500000000001
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "JAWA TENGAH",
+        "provinsi": "JAWA TENGAH",
+        "avg_p0": 11.39,
+        "region_count": 35,
+        "priority": "Medium Priority",
+        "center": [
+          110.1403,
+          -7.1509
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.4403,
+              -7.8509
+            ],
+            [
+              110.8403,
+              -7.8509
+            ],
+            [
+              110.8403,
+              -6.4509
+            ],
+            [
+              109.4403,
+              -6.4509
+            ],
+            [
+              109.4403,
+              -7.8509
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "D I YOGYAKARTA",
+        "provinsi": "D I YOGYAKARTA",
+        "avg_p0": 13.29,
+        "region_count": 5,
+        "priority": "Medium Priority",
+        "center": [
+          118,
+          -2.5
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              117.3,
+              -3.2
+            ],
+            [
+              118.7,
+              -3.2
+            ],
+            [
+              118.7,
+              -1.8
+            ],
+            [
+              117.3,
+              -1.8
+            ],
+            [
+              117.3,
+              -3.2
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "JAWA TIMUR",
+        "provinsi": "JAWA TIMUR",
+        "avg_p0": 11.32,
+        "region_count": 38,
+        "priority": "Medium Priority",
+        "center": [
+          112.6326,
+          -7.536
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.9326,
+              -8.235999999999999
+            ],
+            [
+              113.3326,
+              -8.235999999999999
+            ],
+            [
+              113.3326,
+              -6.835999999999999
+            ],
+            [
+              111.9326,
+              -6.835999999999999
+            ],
+            [
+              111.9326,
+              -8.235999999999999
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "BANTEN",
+        "provinsi": "BANTEN",
+        "avg_p0": 6.64,
+        "region_count": 8,
+        "priority": "Low Priority",
+        "center": [
+          106.1136,
+          -6.4058
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.4136,
+              -7.1058
+            ],
+            [
+              106.81360000000001,
+              -7.1058
+            ],
+            [
+              106.81360000000001,
+              -5.7058
+            ],
+            [
+              105.4136,
+              -5.7058
+            ],
+            [
+              105.4136,
+              -7.1058
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "BALI",
+        "provinsi": "BALI",
+        "avg_p0": 4.92,
+        "region_count": 9,
+        "priority": "Low Priority",
+        "center": [
+          115.1889,
+          -8.4095
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.4889,
+              -9.109499999999999
+            ],
+            [
+              115.8889,
+              -9.109499999999999
+            ],
+            [
+              115.8889,
+              -7.709499999999999
+            ],
+            [
+              114.4889,
+              -7.709499999999999
+            ],
+            [
+              114.4889,
+              -9.109499999999999
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "NUSA TENGGARA BARAT",
+        "provinsi": "NUSA TENGGARA BARAT",
+        "avg_p0": 14.28,
+        "region_count": 10,
+        "priority": "High Priority",
+        "center": [
+          117.4182,
+          -8.6529
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.7182,
+              -9.3529
+            ],
+            [
+              118.1182,
+              -9.3529
+            ],
+            [
+              118.1182,
+              -7.9529000000000005
+            ],
+            [
+              116.7182,
+              -7.9529000000000005
+            ],
+            [
+              116.7182,
+              -9.3529
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "NUSA TENGGARA TIMUR",
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "avg_p0": 21.75,
+        "region_count": 22,
+        "priority": "High Priority",
+        "center": [
+          121.0794,
+          -8.6574
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.3794,
+              -9.3574
+            ],
+            [
+              121.77940000000001,
+              -9.3574
+            ],
+            [
+              121.77940000000001,
+              -7.957400000000001
+            ],
+            [
+              120.3794,
+              -7.957400000000001
+            ],
+            [
+              120.3794,
+              -9.3574
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "KALIMANTAN BARAT",
+        "provinsi": "KALIMANTAN BARAT",
+        "avg_p0": 7.47,
+        "region_count": 14,
+        "priority": "Low Priority",
+        "center": [
+          111.4753,
+          -0.2787
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.7753,
+              -0.9786999999999999
+            ],
+            [
+              112.17530000000001,
+              -0.9786999999999999
+            ],
+            [
+              112.17530000000001,
+              0.42129999999999995
+            ],
+            [
+              110.7753,
+              0.42129999999999995
+            ],
+            [
+              110.7753,
+              -0.9786999999999999
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "KALIMANTAN TENGAH",
+        "provinsi": "KALIMANTAN TENGAH",
+        "avg_p0": 5.07,
+        "region_count": 14,
+        "priority": "Low Priority",
+        "center": [
+          113.4173,
+          -1.6815
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.7173,
+              -2.3815
+            ],
+            [
+              114.1173,
+              -2.3815
+            ],
+            [
+              114.1173,
+              -0.9815
+            ],
+            [
+              112.7173,
+              -0.9815
+            ],
+            [
+              112.7173,
+              -2.3815
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "KALIMANTAN SELATAN",
+        "provinsi": "KALIMANTAN SELATAN",
+        "avg_p0": 5.04,
+        "region_count": 13,
+        "priority": "Low Priority",
+        "center": [
+          115.4389,
+          -3.0926
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.7389,
+              -3.7926
+            ],
+            [
+              116.1389,
+              -3.7926
+            ],
+            [
+              116.1389,
+              -2.3926
+            ],
+            [
+              114.7389,
+              -2.3926
+            ],
+            [
+              114.7389,
+              -3.7926
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "KALIMANTAN TIMUR",
+        "provinsi": "KALIMANTAN TIMUR",
+        "avg_p0": 7.57,
+        "region_count": 10,
+        "priority": "Low Priority",
+        "center": [
+          116.4194,
+          0.5387
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.7194,
+              -0.1613
+            ],
+            [
+              117.1194,
+              -0.1613
+            ],
+            [
+              117.1194,
+              1.2387
+            ],
+            [
+              115.7194,
+              1.2387
+            ],
+            [
+              115.7194,
+              -0.1613
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "KALIMANTAN UTARA",
+        "provinsi": "KALIMANTAN UTARA",
+        "avg_p0": 7.2,
+        "region_count": 5,
+        "priority": "Low Priority",
+        "center": [
+          116.037,
+          3.0731
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.337,
+              2.3731
+            ],
+            [
+              116.73700000000001,
+              2.3731
+            ],
+            [
+              116.73700000000001,
+              3.7731000000000003
+            ],
+            [
+              115.337,
+              3.7731000000000003
+            ],
+            [
+              115.337,
+              2.3731
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "SULAWESI UTARA",
+        "provinsi": "SULAWESI UTARA",
+        "avg_p0": 8.28,
+        "region_count": 15,
+        "priority": "Medium Priority",
+        "center": [
+          124.5826,
+          1.4748
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              123.8826,
+              0.7748000000000002
+            ],
+            [
+              125.2826,
+              0.7748000000000002
+            ],
+            [
+              125.2826,
+              2.1748000000000003
+            ],
+            [
+              123.8826,
+              2.1748000000000003
+            ],
+            [
+              123.8826,
+              0.7748000000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "SULAWESI TENGAH",
+        "provinsi": "SULAWESI TENGAH",
+        "avg_p0": 13.51,
+        "region_count": 13,
+        "priority": "Medium Priority",
+        "center": [
+          121.0825,
+          -1.43
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.3825,
+              -2.13
+            ],
+            [
+              121.7825,
+              -2.13
+            ],
+            [
+              121.7825,
+              -0.73
+            ],
+            [
+              120.3825,
+              -0.73
+            ],
+            [
+              120.3825,
+              -2.13
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "SULAWESI SELATAN",
+        "provinsi": "SULAWESI SELATAN",
+        "avg_p0": 9.47,
+        "region_count": 24,
+        "priority": "Medium Priority",
+        "center": [
+          119.9741,
+          -3.6687
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.2741,
+              -4.3687
+            ],
+            [
+              120.67410000000001,
+              -4.3687
+            ],
+            [
+              120.67410000000001,
+              -2.9687
+            ],
+            [
+              119.2741,
+              -2.9687
+            ],
+            [
+              119.2741,
+              -4.3687
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "SULAWESI TENGGARA",
+        "provinsi": "SULAWESI TENGGARA",
+        "avg_p0": 13.07,
+        "region_count": 17,
+        "priority": "Medium Priority",
+        "center": [
+          122.5163,
+          -4.1449
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.8163,
+              -4.8449
+            ],
+            [
+              123.2163,
+              -4.8449
+            ],
+            [
+              123.2163,
+              -3.4448999999999996
+            ],
+            [
+              121.8163,
+              -3.4448999999999996
+            ],
+            [
+              121.8163,
+              -4.8449
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "GORONTALO",
+        "provinsi": "GORONTALO",
+        "avg_p0": 15.74,
+        "region_count": 6,
+        "priority": "High Priority",
+        "center": [
+          122.4556,
+          0.6999
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.7556,
+              -0.00009999999999998899
+            ],
+            [
+              123.1556,
+              -0.00009999999999998899
+            ],
+            [
+              123.1556,
+              1.3999
+            ],
+            [
+              121.7556,
+              1.3999
+            ],
+            [
+              121.7556,
+              -0.00009999999999998899
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "SULAWESI BARAT",
+        "provinsi": "SULAWESI BARAT",
+        "avg_p0": 10.53,
+        "region_count": 6,
+        "priority": "Medium Priority",
+        "center": [
+          119.3115,
+          -2.4975
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.61149999999999,
+              -3.1975
+            ],
+            [
+              120.0115,
+              -3.1975
+            ],
+            [
+              120.0115,
+              -1.7975
+            ],
+            [
+              118.61149999999999,
+              -1.7975
+            ],
+            [
+              118.61149999999999,
+              -3.1975
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "MALUKU",
+        "provinsi": "MALUKU",
+        "avg_p0": 21.44,
+        "region_count": 11,
+        "priority": "High Priority",
+        "center": [
+          129.584,
+          -3.2385
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              128.88400000000001,
+              -3.9385000000000003
+            ],
+            [
+              130.284,
+              -3.9385000000000003
+            ],
+            [
+              130.284,
+              -2.5385
+            ],
+            [
+              128.88400000000001,
+              -2.5385
+            ],
+            [
+              128.88400000000001,
+              -3.9385000000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "MALUKU UTARA",
+        "provinsi": "MALUKU UTARA",
+        "avg_p0": 8.03,
+        "region_count": 10,
+        "priority": "Medium Priority",
+        "center": [
+          127.539,
+          1.5709
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.839,
+              0.8709
+            ],
+            [
+              128.239,
+              0.8709
+            ],
+            [
+              128.239,
+              2.2709
+            ],
+            [
+              126.839,
+              2.2709
+            ],
+            [
+              126.839,
+              0.8709
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "PAPUA BARAT",
+        "provinsi": "PAPUA BARAT",
+        "avg_p0": 25.33,
+        "region_count": 13,
+        "priority": "High Priority",
+        "center": [
+          133.1747,
+          -1.3361
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              132.4747,
+              -2.0361000000000002
+            ],
+            [
+              133.8747,
+              -2.0361000000000002
+            ],
+            [
+              133.8747,
+              -0.6361000000000001
+            ],
+            [
+              132.4747,
+              -0.6361000000000001
+            ],
+            [
+              132.4747,
+              -2.0361000000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME_1": "PAPUA",
+        "provinsi": "PAPUA",
+        "avg_p0": 28.38,
+        "region_count": 29,
+        "priority": "High Priority",
+        "center": [
+          138.0804,
+          -4.2699
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.3804,
+              -4.9699
+            ],
+            [
+              138.7804,
+              -4.9699
+            ],
+            [
+              138.7804,
+              -3.5698999999999996
+            ],
+            [
+              137.3804,
+              -3.5698999999999996
+            ],
+            [
+              137.3804,
+              -4.9699
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
